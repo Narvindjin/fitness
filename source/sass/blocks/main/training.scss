@@ -243,12 +243,16 @@
 
 .training__video {
   position: absolute;
-  width: 100%;
+  width: calc(100% - 78px);
   height: 100%;
-  left: 0;
+  left: 78px;
   top: 0;
   z-index: 1;
   visibility: hidden;
+
+  @include vp-1199 {
+    width: 100%;
+  }
 }
 
 .training__video--shown {
