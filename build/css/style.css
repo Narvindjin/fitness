@@ -4439,6 +4439,10 @@ a.contacts__item-text.focus-visible:focus {
     width: 324px;
   }
 
+  .intro__img-container img {
+    aspect-ratio: 648/780;
+  }
+
   .offers {
     padding-top: 91px;
     padding-bottom: 91px;

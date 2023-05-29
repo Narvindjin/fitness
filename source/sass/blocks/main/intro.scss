@@ -188,4 +188,8 @@
 .intro__img-container img {
   width: 100%;
   height: auto;
+
+  @include vp-1199 {
+    aspect-ratio: 648/780;
+  }
 }
