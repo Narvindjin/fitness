@@ -1,0 +1,256 @@
+.training {
+  padding-top: 120px;
+  padding-bottom: 235px;
+
+  @include vp-1199 {
+    padding-bottom: 183px;
+    padding-top: 100px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 70px;
+    padding-top: 63px;
+  }
+}
+
+.training__container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: $color-default-black;
+
+  @include vp-1199 {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  @include vp-767 {
+    gap: 40px;
+  }
+}
+
+.training__title {
+  margin-top: 0;
+  margin-bottom: 7px;
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 4.8rem;
+  line-height: 5.8rem;
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    font-size: 4.2rem;
+    line-height: 5rem;
+    margin-bottom: 0;
+    padding-right: 15px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 4px;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+  }
+}
+
+.training__text-container {
+  padding-left: 60px;
+  padding-top: 38px;
+  width: 36%;
+
+  @include vp-1199 {
+    text-align: center;
+    width: 100%;
+    padding-left: 0;
+    padding-top: 0;
+    margin-bottom: -16px;
+  }
+
+  @include vp-767 {
+    text-align: start;
+    margin-bottom: -14px;
+  }
+}
+
+.training__subtitle {
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  margin-top: 0;
+  margin-bottom: 40px;
+
+  @include vp-1199 {
+    margin-bottom: 35px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 25px;
+  }
+}
+
+.training__text-wrapper {
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+  @include vp-1199 {
+    width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include vp-767 {
+    width: 90%;
+    margin-left: unset;
+  }
+}
+
+.training__text-wrapper p {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.training__text-wrapper p:not(:first-of-type) {
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.training__media-container {
+  width: 57%;
+
+  @include vp-1199 {
+    width: 100%;
+  }
+
+  @include vp-767 {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: 100vw;
+    height: 313px;
+  }
+}
+
+.training__image {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+
+  @include vp-767 {
+    min-height: 100%;
+    object-fit: cover;
+    object-position: 75% 75%;
+  }
+}
+
+.training__video-container {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 78px;
+  box-sizing: content-box;
+  width: 28.5%;
+  aspect-ratio: 364/228;
+
+  @include vp-1199 {
+    width: 34.5%;
+    box-sizing: border-box;
+    padding-left: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include vp-767 {
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+    width: 100vw;
+    transform: none;
+    aspect-ratio: 320/167;
+  }
+}
+
+.training__video-wrapper::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: 3;
+  background: rgba(20, 54, 122, 0.5);
+}
+
+.training__video-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  object-fit: cover;
+
+  @include vp-767 {
+    aspect-ratio: 320/167;
+  }
+}
+
+.training__video-play {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 0;
+  background: transparent;
+  height: 100px;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+  z-index: 4;
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  @include vp-1199 {
+    height: 73px;
+    width: 73px;
+  }
+}
+
+.training__video-wrapper {
+  position: relative;
+  opacity: 1;
+  transition: opacity $trans-default;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+.training__video-wrapper--fading {
+  opacity: 0;
+}
+
+.training__video-wrapper--hidden {
+  display: none;
+}
+
+.training__video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.training__video--shown {
+  visibility: visible;
+}

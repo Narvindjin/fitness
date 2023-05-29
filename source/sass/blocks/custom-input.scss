@@ -3,12 +3,11 @@
   position: relative;
 
   display: flex;
-  width: 530px;
+  width: 100%;
   padding: 14px 0 28px;
 
   @media screen and (max-width: 767px) {
-    padding: 4px 0 48px;
-    width: 100%;
+    padding: 0 0 37px;
   }
 
   label {
@@ -20,33 +19,40 @@
       align-items: flex-start;
       flex-direction: column;
     }
+  }
 
-    input,
-    textarea {
-      flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
-      padding: 10px;
+  input,
+  textarea {
+    width: 100%;
+    min-width: 100%;
+    display: inline-flex;
+    flex-grow: 1;
+    min-height: 23px;
+    margin-left: auto;
+    padding-bottom: 6px;
+    padding-left: 0;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #74819c;
+    outline: none;
+    color: $color-default-white;
 
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
-      outline: none;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
 
-      transition: border 0.3s ease;
+    transition: border 0.3s ease;
 
-      @media screen and (max-width: 767px) {
-        max-width: unset;
-        width: 100%;
-      }
+    &::placeholder {
+      color: $color-gray;
+      opacity: 0.9;
+    }
 
-      &:hover {
-        border: 2px solid rgba(#000000, 0.5);
-      }
+    &:hover {
+      border-bottom: 1px solid rgba(#000000, 0.5);
+    }
 
-      &:focus {
-        border: 2px solid rgba(#000000, 0.8);
-      }
+    &:focus {
+      border-bottom: 1px solid rgba(#000000, 0.8);
     }
   }
 
@@ -75,22 +81,22 @@
   &.is-invalid {
     input,
     textarea {
-      border: 2px solid #ff1553;
+      border-bottom: 1px solid #ff1553;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
+        border-bottom: 1px solid rgba(#ff1553, 0.5);
       }
     }
   }
 
   &.is-valid {
     input {
-      border: 2px solid #22b259;
+      border-bottom: 1px solid #22b259;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#22b259, 0.5);
+        border-bottom: 1px solid rgba(#22b259, 0.5);
       }
     }
   }

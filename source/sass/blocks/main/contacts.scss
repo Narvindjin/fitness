@@ -1,0 +1,144 @@
+.contacts {
+  width: 50%;
+  border-top: 1px solid #74819c;
+
+  @include vp-1199 {
+    width: 100%;
+    border-top: none;
+    padding-right: 103px;
+  }
+
+  @include vp-767 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.contacts__wrapper {
+  margin-right: auto;
+  max-width: 585px;
+  padding: 56px 0 64px 120px;
+
+  @include vp-1199 {
+    max-width: 665px;
+    margin-left: auto;
+    padding: 63px 0 61px 133px;
+  }
+
+  @include vp-767 {
+    padding: 63px 0 61px 0;
+    width: 100%;
+  }
+}
+
+.contacts__title {
+  margin-top: 0;
+  margin-bottom: 36px;
+
+  @include vp-1199 {
+    margin-bottom: 32px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 34px;
+  }
+}
+
+.contacts__container {
+  display: flex;
+  flex-direction: row;
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+.contacts__column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 17px;
+  justify-content: space-between;
+
+  @include vp-1199 {
+    gap: 20px;
+    width: 50%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.contacts__column:first-of-type {
+  margin-left: 5px;
+
+  @include vp-1199 {
+    margin-left: 0;
+  }
+}
+
+.contacts__column:nth-child(2n-1)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: calc(100% - 10px);
+  top: 5px;
+  width: 1px;
+  background-color: #74819c;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.contacts__column:nth-child(2n) {
+  padding-left: 59px;
+
+  @include vp-1199 {
+    padding-left: 48px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
+}
+
+.contacts__item-title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-style: normal;
+  margin-top: 0;
+  margin-bottom: 3px;
+
+  @include vp-1199 {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 6px;
+  }
+}
+
+.contacts__item-text {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  font-style: normal;
+  margin: 0;
+  display: block;
+
+  @include vp-1199 {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+}
+
+a.contacts__item-text {
+  cursor: pointer;
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.7;
+  }
+}
