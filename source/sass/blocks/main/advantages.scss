@@ -17,7 +17,7 @@
 .advantages__title {
   text-align: center;
   margin-top: 0;
-  margin-bottom: 44px;
+  margin-bottom: 46px;
   padding-left: 11px;
 
   @include vp-1199 {
@@ -47,7 +47,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  column-gap: 250px;
+  column-gap: 230px;
   width: 89.5%;
   justify-content: space-between;
 
@@ -68,8 +68,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 32px;
-  max-width: 340px;
+  gap: 30px;
+  max-width: 339px;
   padding-top: 73px;
   border-top: 2px solid rgba(209, 10, 66, 0.2);
 
@@ -125,7 +125,7 @@
 .advantages__special {
   position: absolute;
   left: 0;
-  top: -13px;
+  top: 0;
   right: 0;
   bottom: 0;
   margin: auto;

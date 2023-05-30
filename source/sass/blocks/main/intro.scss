@@ -40,6 +40,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 110px;
+  max-width: 406px;
 
   @include vp-1199 {
     padding-top: 49px;
@@ -175,9 +176,11 @@
 
 .intro__img-container {
   width: 500px;
+  min-width: 500px;
 
   @include vp-1199 {
     width: 324px;
+    min-width: 324px;
   }
 
   @include vp-767 {

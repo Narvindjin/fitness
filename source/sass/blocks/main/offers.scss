@@ -161,11 +161,8 @@
   position: relative;
   padding: 7px;
   flex-grow: 1;
-
-  @include vp-1199 {
-    height: 211px;
-    min-height: 100%;
-  }
+  height: 211px;
+  min-height: 211px;
 }
 
 .offers__item::after {
