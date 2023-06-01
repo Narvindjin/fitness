@@ -41,17 +41,18 @@
 
 .offers__special {
   width: 48.2%;
+  min-width: 48.2%;
   display: flex;
   flex-direction: row;
   align-self: center;
 
   @include vp-1199 {
+    min-width: unset;
     width: 100%;
   }
 
   @include vp-767 {
-    display: grid;
-    grid-auto-rows: 1fr;
+    flex-direction: column;
   }
 }
 
@@ -59,17 +60,21 @@
   display: flex;
   flex-direction: column;
   width: 50%;
+  min-width: 50%;
   background-color: $color-torch-red;
   color: $color-default-white;
   padding: 41px 45px 45px 45px;
 
   @include vp-1199 {
     width: 41%;
+    min-width: 41%;
   }
 
   @include vp-767 {
+    min-width: unset;
     width: 100%;
     text-align: center;
+    min-height: 299px;
   }
 }
 
@@ -101,6 +106,7 @@
   line-height: 2.5rem;
   margin-top: 0;
   margin-bottom: auto;
+  padding-bottom: 20px;
 }
 
 .offers__special-link {
@@ -161,8 +167,8 @@
   position: relative;
   padding: 7px;
   flex-grow: 1;
-  height: 211px;
   min-height: 211px;
+  display: flex;
 }
 
 .offers__item::after {
@@ -185,7 +191,6 @@
   padding: 18px 28px 28px 28px;
   color: $color-patrick-blue;
   width: 100%;
-  height: 100%;
 
   @include vp-767 {
     text-align: center;
@@ -207,6 +212,7 @@
   margin-bottom: auto;
   font-size: 1.6rem;
   line-height: 2.2rem;
+  padding-bottom: 20px;
 }
 
 .offers__image {

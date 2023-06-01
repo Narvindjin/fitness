@@ -20,18 +20,23 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
-      <div class="container header__container">
-        <a class="header__logo" href="#">
-          <svg width="119" height="23" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <use href="img/sprite.svg#supergym"></use>
-          </svg>
-          <span class="visually-hidden">Supergym</span></a>
-        <a class="header__phone" href="tel:88005555555">8-800-555-55-55</a>
-      </div>
-    </header>
     <main class="main">
       <section class="intro">
+        <header class="header">
+          <div class="container header__container">
+            <div class="header__logo-container">
+              <a class="header__logo" href="#">
+                <svg width="119" height="23" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <use href="img/sprite.svg#supergym"></use>
+                </svg>
+                <span class="visually-hidden">Supergym</span>
+              </a>
+            </div>
+            <div class="header__links-container">
+              <a class="header__phone" href="tel:88005555555">8-800-555-55-55</a>
+            </div>
+          </div>
+        </header>
         <div class="container intro__container">
           <div class="intro__text-container">
             <div class="intro__wrapper">
@@ -45,7 +50,7 @@
                 <h1 class="intro__title">Фитнес центр</h1>
               </div>
             </div>
-            <a class="btn intro__btn" href="#">Купить абонемент</a>
+            <a class="btn intro__btn" href="#subscriptions">Купить абонемент</a>
           </div>
           <div class="intro__img-container">
             <picture>
@@ -112,14 +117,14 @@
                 </picture>
               </button>
             </div>
-            <iframe class="training__video" data-video="video" width="560" height="315"
+            <!-- <iframe class="training__video" data-video="video" width="560" height="315"
               src="https://www.youtube-nocookie.com/embed/9TZXsZItgdw" title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+              allowfullscreen></iframe> -->
           </div>
         </div>
       </section>
-      <section class="subscriptions">
+      <section class="subscriptions" id="subscriptions">
         <div class="container subscriptions__container" data-tabs="parent" data-delay="300">
           <h2 class="title subscriptions__title">Абонементы</h2>
           <div class="subscriptions__tab-controls" data-tabs="controls">
@@ -321,7 +326,7 @@
           <div class="trainers__wrapper">
             <div class="swiper" data-swiper="trainers">
               <ul class="trainers__card-list swiper-wrapper">
-                <li class="trainers__card-item swiper-slide" data-hover="card" tabindex="-1">
+                <li class="trainers__card-item swiper-slide" data-hover="card" tabindex="0">
                   <div class="trainers__card-outer" data-hover="outer">
                     <picture>
                       <source type="image/webp" srcset="img/anne.webp 1x, img/anne@2x.webp 2x">
@@ -346,7 +351,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="trainers__card-item swiper-slide" data-hover="card" tabindex="-1">
+                <li class="trainers__card-item swiper-slide" data-hover="card" tabindex="0">
                   <div class="trainers__card-outer" data-hover="outer">
                     <picture>
                       <source type="image/webp" srcset="img/alexey.webp 1x, img/alexey@2x.webp 2x">
@@ -371,7 +376,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="trainers__card-item swiper-slide" data-hover="card" tabindex="-1">
+                <li class="trainers__card-item swiper-slide" data-hover="card" tabindex="0">
                   <div class="trainers__card-outer" data-hover="outer">
                     <picture>
                       <source type="image/webp" srcset="img/alexander.webp 1x, img/alexander@2x.webp 2x">
@@ -396,7 +401,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="trainers__card-item swiper-slide" data-hover="card" tabindex="-1">
+                <li class="trainers__card-item swiper-slide" data-hover="card" tabindex="0">
                   <div class="trainers__card-outer" data-hover="outer">
                     <picture>
                       <source type="image/webp" srcset="img/mary.webp 1x, img/mary@2x.webp 2x">
@@ -421,7 +426,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="trainers__card-item swiper-slide" data-hover="card" tabindex="-1">
+                <li class="trainers__card-item swiper-slide" data-hover="card" tabindex="0">
                   <div class="trainers__card-outer" data-hover="outer">
                     <picture>
                       <source type="image/webp" srcset="img/anne.webp 1x, img/anne@2x.webp 2x">
@@ -446,7 +451,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="trainers__card-item swiper-slide" data-hover="card" tabindex="-1">
+                <li class="trainers__card-item swiper-slide" data-hover="card" tabindex="0">
                   <div class="trainers__card-outer" data-hover="outer">
                     <picture>
                       <source type="image/webp" srcset="img/alexey.webp 1x, img/alexey@2x.webp 2x">
@@ -471,7 +476,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="trainers__card-item swiper-slide" data-hover="card" tabindex="-1">
+                <li class="trainers__card-item swiper-slide" data-hover="card" tabindex="0">
                   <div class="trainers__card-outer" data-hover="outer">
                     <picture>
                       <source type="image/webp" srcset="img/alexander.webp 1x, img/alexander@2x.webp 2x">
@@ -496,7 +501,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="trainers__card-item swiper-slide" data-hover="card" tabindex="-1">
+                <li class="trainers__card-item swiper-slide" data-hover="card" tabindex="0">
                   <div class="trainers__card-outer" data-hover="outer">
                     <picture>
                       <source type="image/webp" srcset="img/mary.webp 1x, img/mary@2x.webp 2x">

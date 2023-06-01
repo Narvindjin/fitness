@@ -18,19 +18,19 @@
   flex-direction: row;
   gap: 63px;
   justify-content: flex-start;
-  padding-top: 51px;
+  padding-top: 0;
   padding-bottom: 51px;
   color: $color-default-white;
 
   @include vp-1199 {
-    padding-top: 82px;
+    padding-top: 19px;
     padding-bottom: 82px;
     gap: 29px;
     justify-content: center;
   }
 
   @include vp-767 {
-    padding-top: 108px;
+    padding-top: 69px;
     padding-bottom: 79px;
   }
 }
@@ -86,8 +86,8 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  gap: 18px;
-  margin-bottom: 50px;
+  gap: 19px;
+  margin-bottom: 49px;
 
   @include vp-1199 {
     gap: 25px;
