@@ -1578,7 +1578,8 @@ button,
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .slider__button {
@@ -2389,7 +2390,7 @@ button,
   justify-content: space-between;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: start;
+  align-items: flex-start;
   min-height: 108px;
   padding-top: 43px;
   padding-bottom: 35px;
@@ -4240,7 +4241,8 @@ a.contacts__item-text.focus-visible:focus {
   }
 
   .container {
-    padding: 0 45px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 
   .slider__button--prev {
@@ -4265,8 +4267,9 @@ a.contacts__item-text.focus-visible:focus {
   }
 
   .footer__navigation-list {
+    padding-top: 3px;
     gap: 31px;
-    padding-left: 15px;
+    padding-left: 18px;
   }
 
   .header {
@@ -4792,7 +4795,8 @@ a.contacts__item-text.focus-visible:focus {
   }
 
   .container {
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .slider__button {
@@ -4835,6 +4839,7 @@ a.contacts__item-text.focus-visible:focus {
   }
 
   .footer__navigation-list {
+    padding-top: 0;
     display: block;
     -webkit-columns: 2;
     -moz-columns: 2;

@@ -1,5 +1,14 @@
 let initSliders = () => {
+  let initFocus = (swiper, container) => {
+    let firstSlides = container.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)');
+    firstSlides.forEach((slide) => {
+      slide.setAttribute('tabindex', '0');
+    });
+  };
+
+
   if (document.querySelector('[data-swiper="trainers"]')) {
+    let container = document.querySelector('[data-swiper="trainers"]');
     const swiperTrainers = new Swiper('[data-swiper="trainers"]', {
       speed: 400,
       breakpoints: {
@@ -27,9 +36,11 @@ let initSliders = () => {
       },
       lazy: true,
     });
+    initFocus(swiperTrainers, container);
   }
 
   if (document.querySelector('[data-swiper="reviews"]')) {
+    let container = document.querySelector('[data-swiper="reviews"]');
     const swiperReviews = new Swiper('[data-swiper="reviews"]', {
       speed: 400,
       slidesPerView: 1,
@@ -41,6 +52,7 @@ let initSliders = () => {
       },
       lazy: true,
     });
+    initFocus(swiperReviews, container);
   }
 };
 
