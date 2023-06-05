@@ -40,7 +40,6 @@ let initSliders = () => {
   }
 
   if (document.querySelector('[data-swiper="reviews"]')) {
-    let container = document.querySelector('[data-swiper="reviews"]');
     const swiperReviews = new Swiper('[data-swiper="reviews"]', {
       speed: 400,
       slidesPerView: 1,
@@ -52,7 +51,6 @@ let initSliders = () => {
       },
       lazy: true,
     });
-    initFocus(swiperReviews, container);
   }
 };
 
